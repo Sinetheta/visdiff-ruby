@@ -9,7 +9,7 @@ module Visdiff::Minitest
     klass.send(:include, mod)
 
     submit_proc = lambda do
-      visduff.submit!
+      visdiff.submit!
     end
 
     if Minitest.respond_to?(:after_run)
@@ -32,4 +32,3 @@ module Visdiff::Minitest
     super
   end
 end
-
