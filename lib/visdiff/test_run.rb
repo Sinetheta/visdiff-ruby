@@ -1,3 +1,4 @@
+require 'active_support/core_ext/module'
 require 'visdiff/client'
 
 class Visdiff::TestRun
@@ -46,4 +47,3 @@ class Visdiff::TestRun
     revision.client.config
   end
 end
-
