@@ -39,7 +39,7 @@ module Visdiff
     def attributes
       {
         identifier: identifier,
-        image_attributes: images.map do |image|
+        images_attributes: images.map do |image|
           {identifier: image.identifier, description: description, signature: image.signature}
         end
       }
