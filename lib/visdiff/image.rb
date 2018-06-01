@@ -13,9 +13,7 @@ module Visdiff
     end
 
     def signature
-      @signature ||= IO.popen(["identify", "-format", "%#", '--', fullpath]) do |f|
-        f.read
-      end.strip
+      @signature ||= SecureRandom.hex
     end
 
     def submit!
