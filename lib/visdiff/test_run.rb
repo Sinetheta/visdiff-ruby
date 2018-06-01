@@ -36,9 +36,9 @@ class Visdiff::TestRun
   def observe_page(identifier, page)
     return false unless enabled?
 
-    tmppath = "tmp/visdiff/#{SecureRandom.hex}.png"
     page.driver.render(tmppath, full: true)
     revision.add_image identifier, tmppath
+    tmppath = "visdiff/#{SecureRandom.hex}.png"
   end
 
   private
