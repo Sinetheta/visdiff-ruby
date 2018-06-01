@@ -36,9 +36,9 @@ class Visdiff::TestRun
   def observe_page(identifier, page)
     return false unless enabled?
 
-    revision.add_image identifier, tmppath
     tmppath = "visdiff/#{SecureRandom.hex}.png"
     path = page.save_screenshot(tmppath, full: true)
+    revision.add_image identifier, path
   end
 
   private
